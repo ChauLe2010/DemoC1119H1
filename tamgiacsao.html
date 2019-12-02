@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function intamgiac(N){
+        for(let i=1;i<=N;i++){
+            for(let j=1;j<=i;j++){
+                document.write("* ");
+            }
+            document.write("<br>")
+        }
+    }
+
+    function intamgiacnguoc(N){
+        for(let i=0;i<=N;i++){
+            for(let j=N-i;j>=1;j--){
+                document.write("* ");
+            }
+            document.write("<br>")
+        }
+    }
+
+    intamgiacnguoc(10)
+</script>
+</body>
+</html>

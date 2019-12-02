@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="checkbox" id="ck1" onclick="changeStatus1()">Cheap
+    <input type="checkbox" id="ck2" onclick="changeStatus2()">Fast
+    <input type="checkbox" id="ck3" onclick="changeStatus3()">Good
+    <script>
+        function changeStatus1() {
+            if (document.getElementById("ck1").checked == true) {
+                if (document.getElementById("ck2").checked == true && document.getElementById("ck3").checked == true) {
+                    document.getElementById("ck2").checked = false;
+                }
+            }
+        }
+        function changeStatus2() {
+            if (document.getElementById("ck2").checked == true) {
+                if (document.getElementById("ck1").checked == true && document.getElementById("ck3").checked == true) {
+                    document.getElementById("ck3").checked = false;
+                }
+            }
+        }
+        function changeStatus3(){
+            if(document.getElementById("ck3").checked==true){
+                if(document.getElementById("ck1").checked==true && document.getElementById("ck2").checked==true){
+                    document.getElementById("ck1").checked=false;
+                }
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
