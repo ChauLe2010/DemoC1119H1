@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibo(N){
+        if(N>=1){
+            if(N==1)
+                return 1;
+            if(N==2)
+                return 1;
+            return fibo(N-1)+fibo(N-2);
+        }
+    }
+    function displayFibos(number){
+        for(let i=1;i<number;i++)
+            document.write(fibo(i) + " ");
+    }
+    function sumFibos(number){
+        let sum=0;
+        for(let i=1;i<number;i++)
+            sum+=fibo(i);
+        return sum;
+    }
+    function main(){
+        number=20;
+        displayFibos(number);
+        document.write("<br>Tong la: "+sumFibos(number));
+    }
+    main();
+
+</script>
+</body>
+</html>
